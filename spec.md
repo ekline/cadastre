@@ -1,4 +1,4 @@
-# Cadastre
+# cadastre
 
 ## Hierarchical Namespace and Resource Allocation Registry
 
@@ -10,7 +10,7 @@
 
 # 1. Purpose
 
-Cadastre is a registry for describing, allocating, assigning, and tracking resources that exist within hierarchical namespaces or allocation spaces.
+cadastre is a registry for describing, allocating, assigning, and tracking resources that exist within hierarchical namespaces or allocation spaces.
 
 The initial motivating use cases are:
 
@@ -22,7 +22,7 @@ The initial motivating use cases are:
 - Mission/service definitions that consume identifiers from multiple resource spaces
 - GitOps-oriented declarative configuration and review
 
-Cadastre is intended to be more general than an IPAM system. IPAM is one application of the underlying resource-allocation model.
+cadastre is intended to be more general than an IPAM system. IPAM is one application of the underlying resource-allocation model.
 
 The implementation should therefore avoid embedding IP-specific assumptions into the core domain model.
 
@@ -182,7 +182,7 @@ state
 metadata
 ```
 
-Resources SHOULD have stable Cadastre IDs independent of their serialized representation.
+Resources SHOULD have stable cadastre IDs independent of their serialized representation.
 
 The externally meaningful value remains part of the resource.
 
@@ -388,7 +388,7 @@ allocator block 1000â€“1999
 
 The hierarchy MUST be interpreted according to the resource space.
 
-Cadastre MUST NOT implement arbitrary parent-child relationships as the mechanism for determining resource containment.
+cadastre MUST NOT implement arbitrary parent-child relationships as the mechanism for determining resource containment.
 
 For example:
 
@@ -598,7 +598,7 @@ service:
     - resource: udp-port-4556
 ```
 
-Not every identifier associated with a service must necessarily be allocated by Cadastre.
+Not every identifier associated with a service must necessarily be allocated by cadastre.
 
 The model MUST allow externally defined or informational identifiers.
 
@@ -726,7 +726,7 @@ The implementation MUST NOT hard-code a universal "overlap is always invalid" ru
 
 # 14. Validation
 
-Cadastre MUST provide validation independent of persistence.
+cadastre MUST provide validation independent of persistence.
 
 Validation SHOULD include:
 
@@ -1116,7 +1116,7 @@ Git itself is not the storage abstraction.
 Instead:
 
 ```text
-Cadastre filesystem store
+cadastre filesystem store
         +
        Git
         =
@@ -1821,7 +1821,7 @@ The resulting code should make it straightforward to add another resource spaceâ
 
 The implementation should preserve the following conceptual model:
 
-> **Cadastre is a registry of resources allocated from distinct resource spaces and assigned to domain objects.**
+> **cadastre is a registry of resources allocated from distinct resource spaces and assigned to domain objects.**
 
 Resource spaces establish uniqueness and allocation semantics.
 
